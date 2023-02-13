@@ -36,7 +36,7 @@
   <ul>
     <c:forEach var="item" items="${selectedItems}">
       <tr>
-        <li>${item.key} - ${item.value} </li>
+        <li>${item.key} - ${item.value} - <a href="ServletRemoveShoppingCart?product=${item.key}">remove</a></li>
       </tr>
     </c:forEach>
   </ul>

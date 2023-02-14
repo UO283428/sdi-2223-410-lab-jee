@@ -15,20 +15,19 @@
 <jsp:setProperty name="counter" property="increase" value="1"/>
 <!-- Barra de Navegación superior -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="collapse navbar-collapse" id="my-navbarColor02">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-                <a class="nav-link" href="AddToShoppingCart">Carrito<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="login.jsp">Login<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="admin.jsp">Administrar productos<span class="sr-only">(current)</span></a>
-            </li>
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="AddToShoppingCart">Carrito</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="admin.jsp">Administrar productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="products">Ver productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="comment.jsp">Ver comentarios</a></li>
         </ul>
         <div class="nav navbar-right">
-            <jsp:getProperty name="counter" property="total"/> Visitas
+            <div class="center-block">
+                <jsp:getProperty name="counter" property="total"/>
+                Visitas
+            </div>
         </div>
     </div>
 </nav>

@@ -23,7 +23,7 @@
  }
 %>
 --%>
-<c:if test="${sessionScope.user != 'admin'}">
+<c:if test="${sessionScope.user != 'admin' && sessionScope.user != 'admin1'}">
     <c:redirect url="/login.jsp"/>
 </c:if>
 <jsp:useBean id="product" class="com.uniovi.sdi.Product"/>
@@ -41,6 +41,25 @@
     <jsp:setProperty name="productsService" property="newProduct" value="${product}"/>
     <c:redirect url="/index.jsp"/>
 </c:if>
+<jsp:useBean id="counter" class="com.uniovi.sdi.Counter" scope="application"/>
+<!-- Barra de Navegación superior -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="AddToShoppingCart">Carrito</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="admin.jsp">Administrar productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="products">Ver productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="comment.jsp">Ver comentarios</a></li>
+        </ul>
+        <div class="nav navbar-right">
+            <div class="center-block">
+                <jsp:getProperty name="counter" property="total"/>
+                Visitas
+            </div>
+        </div>
+    </div>
+</nav>
 <!-- Contenido -->
 <div class="container" id="main-container">
     <h2>Agregar producto a la tienda</h2>

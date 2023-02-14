@@ -21,6 +21,7 @@
       <li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
       <li class="nav-item"><a class="nav-link" href="admin.jsp">Administrar productos</a></li>
       <li class="nav-item"><a class="nav-link" href="products">Ver productos</a></li>
+      <li class="nav-item"><a class="nav-link" href="comment.jsp">Ver comentarios</a></li>
     </ul>
     <div class="nav navbar-right">
       <div class="center-block">
